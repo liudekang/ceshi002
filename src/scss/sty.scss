@@ -1,0 +1,90 @@
+@import "common.scss";
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.top {
+    width: 100%;
+    background: #fff;
+    h2 {
+        width: 100%;
+        height: pxTorem(40px);
+        line-height: pxTorem(40px);
+        padding: 0 3%;
+        border-bottom: 1px solid #ccc;
+    }
+    ul {
+        width: 100%;
+        li {
+            width: 100%;
+            height: pxTorem(40px);
+            line-height: pxTorem(40px);
+            padding: 0 3%;
+            border-bottom: 1px solid #ccc;
+        }
+    }
+}
+
+.act {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .drag {
+        width: 70%;
+        height: pxTorem(10px);
+        border-radius: pxTorem(10px);
+        background: #ddd;
+        position: relative;
+        .line {
+            height: 100%;
+            border-radius: pxTorem(10px);
+            width: 30px;
+            background: pink;
+            position: absolute;
+            left: 0;
+            top: 0;
+            .dian {
+                position: absolute;
+                top: - pxTorem(3px);
+                right: - pxTorem(3px);
+                width: pxTorem(16px);
+                height: pxTorem(16px);
+                border-radius: 50%;
+                background: #fff;
+                border: 1px solid #ccc;
+                &:after {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 50%;
+                    background: pink;
+                    position: absolute;
+                    left: 50%;
+                    top: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+    }
+}
+
+///!!!!!!!!!!!!!!!!!!!!!!!
+.up_img {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    background: #fff;
+    margin-top: pxTorem(10px);
+    .clicks,
+    .a_img {
+        width: pxTorem(100px);
+        height: pxTorem(100px);
+        border: 1px dashed red;
+        margin: pxTorem(5px);
+    }
+    .a_img {
+        border: 1px solid #000;
+    }
+}
